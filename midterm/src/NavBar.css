@@ -281,3 +281,16 @@ body {
 .view-item{
   margin-top:100px;
 }
+.view-item img{
+  float:left;
+  height:300px;
+  width:250px;
+}
+.details-div
+{
+  margin-left: 270px;
+  width:800px;
+}
+.details-div h3{
+  float:right;
+}
