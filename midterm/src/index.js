@@ -13,13 +13,13 @@ root.render(
         {/* The Nav Bar */}
         <Route path="/" element={<NavBar />}>
           {/* The Home Page */}
-          <Route index element={}/>
+          <Route path="home" element={}/>
           {/* The Items */}
-          <Route path='state-demo' element={} />
+          <Route path='items' element={} />
           {/* Item Display Page */}
-          <Route path='effect-demo' element={}>
+          <Route path='display-item' element={}>
             {/* Item Index # */}
-            <Route path=':startingCount' element={} />
+            <Route path=':itemNum' element={} />
           </Route>
           {/* The Home Page */}
           <Route path='*' element={} />
