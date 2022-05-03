@@ -1,5 +1,3 @@
-import { Navigate,useNavigate } from 'react-router-dom';
-
 function Home() {
   return (
       <div className='home'>

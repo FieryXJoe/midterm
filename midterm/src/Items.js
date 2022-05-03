@@ -1,4 +1,3 @@
-import { Navigate,useNavigate } from 'react-router-dom';
 import FetchingAllData from './FetchingAllData';
 
 function Items() {
