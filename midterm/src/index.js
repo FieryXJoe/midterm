@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ViewItem from './ViewItem';
+import Items from './Items';
+import Home from './Home';
+import NavBar from './NavBar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,16 +16,16 @@ root.render(
         {/* The Nav Bar */}
         <Route path="/" element={<NavBar />}>
           {/* The Home Page */}
-          <Route path="home" element={}/>
+          <Route path="home" element={<Home />}/>
           {/* The Items */}
-          <Route path='items' element={} />
+          <Route path='items' element={<Items />} />
           {/* Item Display Page */}
-          <Route path='display-item' element={}>
+          <Route path='display-item' element={<ViewItem />}>
             {/* Item Index # */}
-            <Route path=':itemNum' element={} />
+            <Route path=':itemNum' element={<ViewItem />} />
           </Route>
           {/* The Home Page */}
-          <Route path='*' element={} />
+          <Route path='*' element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

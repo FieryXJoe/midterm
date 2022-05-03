@@ -1,7 +1,8 @@
-import { Navigate,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 function NavBar() {
+    const navigate = useNavigate();
   return (
     <div className="App">
         <button onClick = {() => navigate('home')}>
