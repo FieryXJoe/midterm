@@ -258,4 +258,20 @@ body {
   right:0;
   width: 100%;
   border-bottom: slateblue 2px solid;
+  background-color: darkslategray;
+}
+.items{
+  margin-top:100px;
+}
+.items table{
+  margin:auto;
+  width:1000px;
+  border:2px solid darkslategrey;
+  font-size: 30px;
+}
+.items img{
+  height:200px;
+  width:200px;
+  float:right;
+  margin:8px;
 }
