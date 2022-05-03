@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import useFetch from './hooks/useFetch';
+import useFetchID from './hooks/useFetchID';
 import Loading from './Loading';
 
-const FetchingData = (number) => {
+const FetchingData = (props) => {
     const[posts, setPosts] = useState([]);
 
-    const {data, loading, error} = useFetch('products/'+$number);
+    const {data, loading, error} = useFetchID(`products`, props.number);
 
     if(loading){
         return  <Loading />;
@@ -13,14 +13,14 @@ const FetchingData = (number) => {
     return (<>
         { data.length && data.map((data) => {
             return(
-                <div key ={data.id}>
+                <>
+
                     {data.title},
                     {data.price},
                     {data.description},
                     {data.category},
-                    {data.image},
-                    {...data.rating}
-                </div>    
+                    {data.image}
+                </>    
         )})}  
         </>);}
         
