@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
 import Loading from './Loading';
 
-const FetchingAllData = () => {
+function FetchingAllData () {
     const[posts, setPosts] = useState([]);
     const navigate = useNavigate;
 
@@ -12,18 +12,14 @@ const FetchingAllData = () => {
     if(loading){
         return  <Loading />;
     }
-    return (<>
+    return (<table>
         { data.length && data.map((data) => {
             return(
-                <>
-                <table key ={data.id}>
-                    <tr onClick = {() => navigate('display-item/ + {data.id}')}>
+                    <tr key ={data.id} onClick = {() => navigate(`display-item/${data.id}`)}>
                         <th>{data.title}</th>
                         <th><img src = {data.image} /></th>
-                    </tr>
-                </table>    
-                </>
+                    </tr>  
         )})}  
-        </>);}
+        </table>);}
         
 export default FetchingAllData;
