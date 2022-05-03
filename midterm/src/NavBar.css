@@ -269,9 +269,15 @@ body {
   border:2px solid darkslategrey;
   font-size: 30px;
 }
+.items th{
+  border:2px solid darkslategrey;
+}
 .items img{
   height:200px;
   width:200px;
   float:right;
   margin:8px;
+}
+.view-item{
+  margin-top:100px;
 }
