@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import './NavBar.css';
 
 function NavBar() {
     const navigate = useNavigate();
   return (
-    <div className="App">
-        <button onClick = {() => navigate('home')}>
+    <div className="nav-bar" style= {{backgroundColor: "darkslategray"}}>
+        <button onClick = {() => navigate('home')} className="button">
             Home
         </button>
-        <button onClick = {() => navigate('items')}>
+        <button onClick = {() => navigate('items')} className="button">
             Items
         </button>
     </div>

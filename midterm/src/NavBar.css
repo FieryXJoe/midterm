@@ -251,3 +251,11 @@ body {
     transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
   }
 }
+.nav-bar {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  width: 100%;
+  border-bottom: slateblue 2px solid;
+}
