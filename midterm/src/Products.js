@@ -1,4 +1,4 @@
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
 import Loading from './Loading';
 
@@ -10,14 +10,14 @@ function Products () {
     if(loading){
         return  <Loading />;
     }
-    return (<table>
+    return (<table><tbody>
         { data.length && data.map((data) => {
             return(
                     <tr key ={data.id} onClick = {() => navigate(`/items/${data.id}`)}>
-                        <th>{data.title}</th>
-                        <th><img src = {data.image} /></th>
+                        <td>{data.title}</td>
+                        <td><img src = {data.image} /></td>
                     </tr>  
         )})}  
-        </table>);}
+        </tbody></table>);}
         
 export default Products;
