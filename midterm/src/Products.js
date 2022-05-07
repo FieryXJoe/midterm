@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
 import Loading from './Loading';
 
 function Products () {
-    const[posts, setPosts] = useState([]);
     const navigate = useNavigate();
 
     const {data, loading, error} = useFetch('products');
