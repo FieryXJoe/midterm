@@ -1,11 +1,19 @@
-import FetchingAllData from './FetchingAllData';
+import { useParams } from 'react-router-dom';
+import Products from './Products';
+import Product from './Product';
 
 function Items() {
-  return (
-      <div className="items">
-          <FetchingAllData />
-      </div>
-  );
+    const { itemNum } = useParams();
+    return (
+        typeof itemNum === 'undefined' ?
+            <div className="items">
+                <Products />
+            </div>
+            :
+            <div className="view-item">
+                <Product number={itemNum} />
+            </div>
+    );
 }
 
 export default Items;
