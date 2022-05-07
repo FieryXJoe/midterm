@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useFetchID from './hooks/useFetchID';
+import useFetch from './hooks/useFetch';
 import Loading from './Loading';
 
-const FetchingData = (props) => {
+const Product = (props) => {
     const[posts, setPosts] = useState([]);
 
-    const {data, loading, error} = useFetchID(`products`, props.number);
+    const {data, loading, error} = useFetch(`products`, props.number);
     const navigate = useNavigate();
 
     if(loading){
@@ -30,4 +30,4 @@ const FetchingData = (props) => {
         )})}  
         </>);}
         
-export default FetchingData;
+export default Product;
