@@ -18,10 +18,7 @@ root.render(
           {/* The Home Page */}
           <Route path="home" element={<Home />}/>
           {/* The Items */}
-          <Route path='items' element={<Items />} />
-          {/* Item Display Page */}
-          <Route path='display-item' element={<ViewItem />}>
-            {/* Item Index # */}
+          <Route path='items' element={<Items />} >
             <Route path=':itemNum' element={<ViewItem />} />
           </Route>
           {/* The Home Page */}
