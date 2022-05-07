@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ViewItem from './ViewItem';
 import Items from './Items';
 import Home from './Home';
 import NavBar from './NavBar';
@@ -19,7 +18,7 @@ root.render(
           <Route path="home" element={<Home />}/>
           {/* The Items */}
           <Route path='items' element={<Items />} >
-            <Route path=':itemNum' element={<ViewItem />} />
+            <Route path=':itemNum' element={<Items />} />
           </Route>
           {/* The Home Page */}
           <Route path='*' element={<Home />} />
