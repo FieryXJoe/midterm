@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeContext } from '../context/themeContext';
 
 const Header = ({ children, style }) => {
