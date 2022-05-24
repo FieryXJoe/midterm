@@ -30,7 +30,7 @@ function App() {
         <ShoppingCartButton />
       </NavBar>
       <BodyComponent style={{position:'fixed', height:'100%'}} > </BodyComponent>
-      <Content style={{}}>
+      <Content style={{width:'100vw'}}>
         <Outlet />
       </Content>
       

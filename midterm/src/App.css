@@ -252,6 +252,7 @@ body {
 }
 .items{
   margin-top:10px;
+  width:95vw;
 }
 .items table{
   margin:auto;
