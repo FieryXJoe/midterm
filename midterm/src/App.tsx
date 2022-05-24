@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import './App.css';
 import BodyComponent from './components/BodyComponent';
 import Content from './components/Content';
+import ShoppingCartButton from './components/ShoppingCartButton';
 
 function App() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function App() {
           Items
         </button>
         <ToggleSwitch onToggle={toggleTheme} />
+        <ShoppingCartButton />
       </NavBar>
       <BodyComponent style={{position:'fixed', height:'100%'}} > </BodyComponent>
       <Content style={{}}>

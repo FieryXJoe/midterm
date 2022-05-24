@@ -355,3 +355,9 @@ input:checked + .slider:before {
 .container{
   margin-top:70px;
 }
+.shopping-cart-icon{
+  width:2rem;
+  height:2rem;
+  float:right;
+  margin-top: 1rem;
+}
