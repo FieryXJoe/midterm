@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Items from './Items';
 import Home from './Home';
 import App from './App';
+import ShoppingCart from './ShoppingCart';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,9 +20,11 @@ ReactDOM.render(
           <Route path='items' element={<Items />} >
             <Route path=':itemNum' element={<Items />} />
           </Route>
+          <Route path="cart" element={<ShoppingCart />} />
           {/* The Home Page */}
           <Route path='*' element={<Home />} />
         </Route>
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
