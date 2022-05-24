@@ -4,6 +4,8 @@ import ToggleSwitch from './components/ToggleSwitch';
 import { ThemeContext, themes } from './context/themeContext';
 import NavBar from './components/NavBar'
 import './App.css';
+import BodyComponent from './components/BodyComponent';
+import Content from './components/Content';
 
 function App() {
   const navigate = useNavigate();
@@ -25,7 +27,11 @@ function App() {
         </button>
         <ToggleSwitch onToggle={toggleTheme} />
       </NavBar>
-      <Outlet />
+      <BodyComponent style={{position:'fixed', height:'100%'}} > </BodyComponent>
+      <Content style={{}}>
+        <Outlet />
+      </Content>
+      
     </ThemeContext.Provider>
   );
 }

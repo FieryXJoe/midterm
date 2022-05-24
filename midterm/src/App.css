@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  margin: 3rem;
   background-color: #dfdfdf;
 }
 .button {
@@ -252,7 +251,7 @@ body {
   border-bottom: slateblue 2px solid;
 }
 .items{
-  margin-top:100px;
+  margin-top:10px;
 }
 .items table{
   margin:auto;
@@ -270,7 +269,7 @@ body {
   margin:8px;
 }
 .view-item{
-  margin-top:100px;
+  margin-top:10px;
 }
 .view-item img{
   float:left;
@@ -286,7 +285,7 @@ body {
   float:right;
 }
 .home{
-  margin-top:100px;
+  margin-top:10px;
 }
 .switch {
   position: relative;
@@ -344,4 +343,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.body{
+  position:fixed;
+  top:70px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  z-index: -1;
+}
+.container{
+  margin-top:70px;
 }
