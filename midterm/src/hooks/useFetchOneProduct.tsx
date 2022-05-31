@@ -21,7 +21,6 @@ const useFetchOneProduct = (endURL:string, num:any) => {
             }
         };
         getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [endURL]);
 
     return {data, loading, error};
