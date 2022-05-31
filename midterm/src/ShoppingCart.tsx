@@ -10,17 +10,21 @@ function ShoppingCart() {
 
     const { data, loading, error } = useFetchWholeCart('cart');
     const [show, setShow] = useState(false);
+    const [total, setTotal] = useState(0);
+
+    let tempTotal = 0;
+
+    function showCheckout()
+    {
+        setTotal(tempTotal);
+        setShow(true);
+    }
 
     if (loading) {
         return <Loading />;
     }
-    let total = 0;
-    if (show) {
-        return (
-            <ShoppingCartConfirm func = {() => setShow(false)} />
-        );
-    }
-    else {
+    if (!show) 
+    {
         return (<><table className="shopping-cart-table"><tbody>
             <tr>
                 <td>Item</td>
@@ -29,7 +33,7 @@ function ShoppingCart() {
                 <td>Total Cost</td>
             </tr>
             {data.length && data.map((data) => {
-                total += data.price * data.quantity
+                tempTotal += data.price * data.quantity
                 return (
                     <tr key={data.title}>
                         <td>{data.title}</td>
@@ -43,13 +47,19 @@ function ShoppingCart() {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>{total}</td>
+                <td>{tempTotal}</td>
             </tr>
         </tbody></table>
-            <button onClick={() => setShow(true)} className="button">
+            <button onClick={() => showCheckout()} className="button" style={{float:'right'}}>
                 Checkout
             </button>
         </>);
+    }
+    else 
+    {
+        return (
+            <ShoppingCartConfirm func = {() => setShow(false)} amount = {total} />
+        );
     }
 }
 

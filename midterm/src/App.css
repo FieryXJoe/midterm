@@ -362,6 +362,8 @@ input:checked + .slider:before {
 }
 .shopping-cart-table{
   width:90vw;
+  margin:auto;
+  margin-top:120px;
 }
 .shopping-cart-table td{
   border:1px solid lightcyan;
