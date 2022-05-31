@@ -11,7 +11,7 @@ function Items() {
             </div>
             :
             <div className="view-item">
-                <Product number={itemNum} />
+                <Product num={itemNum} />
             </div>
     );
 }
