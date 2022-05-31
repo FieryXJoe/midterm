@@ -4,7 +4,7 @@ const Content = ({ children, style }) => {
     return (
         <ThemeContext.Consumer>
             {({ theme }) => (
-                <div className="container"style={(style, { backgroundColor: theme.background, color: theme.foreground })}>
+                <div className="container" style={(style, { backgroundColor: theme.background, color: theme.foreground })}>
                     
                     {children}
                 </div>
