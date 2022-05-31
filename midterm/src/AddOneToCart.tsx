@@ -1,4 +1,4 @@
-import usePut from './hooks/usePut';
+import usePost from './hooks/usePost';
 
 interface Props {
     title: string,
@@ -6,7 +6,7 @@ interface Props {
 }
 
 const AddOneToCart = (props: Props) => {
-    usePut(`cart/title/${props.title}`, {
+    usePost(`cart/title/${props.title}`, {
         title: props.title,
         price: props.price,
         quantity: 1
