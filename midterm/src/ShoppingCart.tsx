@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import useFetch from './hooks/useFetch';
+import useFetchWholeCart from './hooks/useFetchWholeCart';
 import Loading from './Loading';
 
 function ShoppingCart () {
     const navigate = useNavigate();
 
-    const {data, loading, error} = useFetch('cart');
+    const {data, loading, error} = useFetchWholeCart('cart');
 
     if(loading){
         return  <Loading />;

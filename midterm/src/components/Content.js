@@ -1,12 +1,12 @@
 import { ThemeContext } from '../context/themeContext';
+import { ThemeType } from '../types/ThemeType';
 
-const Content = ({ children, style }) => {
+const Content = (props) => {
     return (
         <ThemeContext.Consumer>
             {({ theme }) => (
-                <div className="container" style={(style, { backgroundColor: theme.background, color: theme.foreground })}>
-                    
-                    {children}
+                <div className="container" style={(props.style, { backgroundColor: theme.background, color: theme.foreground })}>
+                    {props.children}
                 </div>
             )}
         </ThemeContext.Consumer>

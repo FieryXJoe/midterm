@@ -30,5 +30,6 @@ const Product = (props: Props) => {
         </div>
     </>
     );
+    else return(<></>)
 }
 export default Product;
