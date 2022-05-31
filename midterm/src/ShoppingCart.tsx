@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Box from './components/Box';
+import ShoppingCartConfirm from './components/ShoppingCartConfirm';
 import useFetchWholeCart from './hooks/useFetchWholeCart';
 import Loading from './Loading';
 
@@ -16,18 +17,7 @@ function ShoppingCart() {
     let total = 0;
     if (show) {
         return (
-            <div>
-                <div className="checkout">
-                    Would you like to confirm the purchase?
-                    <br />
-                    <button onClick={() => setShow(false)} className="button">
-                        Confirm
-                    </button>
-                    <button onClick={() => setShow(false)} className="button">
-                        Cancel
-                    </button>
-                </div>
-            </div>
+            <ShoppingCartConfirm func = {() => setShow(false)} />
         );
     }
     else {
