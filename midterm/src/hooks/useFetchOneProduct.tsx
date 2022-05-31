@@ -4,7 +4,7 @@ import { ProductType } from '../types/ProductType';
 
 const baseURL = 'http://localhost:3000/'
 
-const useFetch = (endURL:string) => {
+const useFetchOneProduct = (endURL:string, num:any) => {
     const[loading, setLoading] = useState<boolean>(true);
     const[data, setData] = useState<ProductType[]>([]);
     const[error, setError] = useState<string>('');
@@ -12,7 +12,7 @@ const useFetch = (endURL:string) => {
     useEffect(() => {
         const getData = async () => {
             try{
-                const response = await axios.get(`${baseURL}${endURL}`);
+                const response = await axios.get(`${baseURL}${endURL}/?id=${num}`);
                 setData(response.data);
             }catch (error : any){
                 setError(error);
@@ -27,4 +27,4 @@ const useFetch = (endURL:string) => {
     return {data, loading, error};
 }
 
-export default useFetch;
+export default useFetchOneProduct;

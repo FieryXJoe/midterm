@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { ProductType } from '../types/ProductType';
+import { CartType } from '../types/CartType';
 
 const baseURL = 'http://localhost:3000/'
 
-const useFetch = (endURL:string) => {
+const useFetchCart = (endURL:string, num:any) => {
     const[loading, setLoading] = useState<boolean>(true);
-    const[data, setData] = useState<ProductType[]>([]);
+    const[data, setData] = useState<CartType[]>([]);
     const[error, setError] = useState<string>('');
 
     useEffect(() => {
         const getData = async () => {
             try{
-                const response = await axios.get(`${baseURL}${endURL}`);
+                const response = await axios.get(`${baseURL}${endURL}`, {params:{title:num}});
                 setData(response.data);
             }catch (error : any){
                 setError(error);
@@ -27,4 +27,4 @@ const useFetch = (endURL:string) => {
     return {data, loading, error};
 }
 
-export default useFetch;
+export default useFetchCart;
