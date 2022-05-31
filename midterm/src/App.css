@@ -55,14 +55,6 @@ body {
   top: 20vh;
   left: calc(50% - 15rem);
 }
-.container {
-  display: grid;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  width: 30rem;
-}
 .form-label {
   margin: 5px 0;
 }
