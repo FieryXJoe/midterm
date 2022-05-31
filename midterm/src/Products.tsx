@@ -18,6 +18,7 @@ function Products () {
                         <td><img src = {data.image} /></td>
                     </tr>  
         )})}  
-        </tbody></table>);}
+        </tbody></table>
+        );}
         
 export default Products;

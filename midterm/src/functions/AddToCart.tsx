@@ -1,7 +1,6 @@
 import AddOneToCart from './AddOneToCart';
-import useFetchCart from './hooks/useFetchCart';
-import usePut from './hooks/usePut';
-import UpdateQuantityInCart from './UpdateQuantityInCart';
+import useFetchCart from './../hooks/useFetchCart';
+import UpdateQuantityInCart from '../UpdateQuantityInCart';
 
 interface Props {
     title: string,

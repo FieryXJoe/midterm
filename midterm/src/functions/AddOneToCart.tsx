@@ -1,4 +1,4 @@
-import usePost from './hooks/usePost';
+import usePost from './../hooks/usePost';
 
 interface Props {
     title: string,

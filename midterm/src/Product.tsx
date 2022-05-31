@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { idText } from 'typescript';
-import AddToCart from './AddToCart';
+import AddToCart from './functions/AddToCart';
 import useFetchOneProduct from './hooks/useFetchOneProduct';
 import Loading from './Loading';
 
