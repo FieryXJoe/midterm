@@ -359,6 +359,18 @@ input:checked + .slider:before {
 .shopping-cart-icon{
   width:2rem;
   height:2rem;
+  margin-top:0.1rem;
+}
+.shopping-cart-icon-container{
+  width:2rem;
+  height:2rem;
   float:right;
   margin-top: 1rem;
+  padding:0px;
+}
+.shopping-cart-table{
+  width:90vw;
+}
+.shopping-cart-table td{
+  border:1px solid lightcyan;
 }
