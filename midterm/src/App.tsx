@@ -27,7 +27,9 @@ function App() {
           Items
         </button>
         <ToggleSwitch onToggle={toggleTheme} />
-        <ShoppingCartButton />
+        <div onClick={() => navigate('cart')} className="shopping-cart-icon-container">
+          <ShoppingCartButton />
+        </div>
       </NavBar>
       <BodyComponent style={{position:'fixed', height:'100%'}} > </BodyComponent>
       <Content style={{width:'100vw'}}>
